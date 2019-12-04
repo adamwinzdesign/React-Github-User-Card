@@ -5,6 +5,8 @@ import axios from 'axios';
 import UserCard from './components/UserCard';
 import FollowerCard from './components/FollowerCard';
 
+import { AppContain } from './components/ComponentStyles';
+
 class App extends React.Component {
   constructor() {
     super();
@@ -39,10 +41,10 @@ class App extends React.Component {
 
   render() {
     return(
-      <div>
+      <AppContain>
         <UserCard user={this.state.user} />
         <FollowerCard follower={this.state.follower} />
-      </div>
+      </AppContain>
     )
   }
 }
