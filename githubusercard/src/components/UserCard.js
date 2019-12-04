@@ -10,6 +10,7 @@ const UserCard = (props) => {
       <p>Number of Followers: {props.user.followers}</p>
       <p>Number of users {props.user.name} is following: {props.user.following}</p>
       <img src={props.user.avatar_url} alt='User'></img>
+      <img src="http://ghchart.rshah.org/adamwinzdesign" alt="adamwinzdesign's Github chart" />
     </div>
   )
 }

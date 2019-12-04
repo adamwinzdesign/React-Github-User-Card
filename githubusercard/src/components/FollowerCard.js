@@ -9,6 +9,7 @@ const FollowerCard = (props) => {
           <img src={follower.avatar_url} alt={follower.name} />
           <h3>Login: {follower.login}</h3>
           <a href={follower.html_url} target='_blank' rel="noopener noreferrer">Github</a>
+          <img src={`http://ghchart.rshah.org/${follower.login}`} alt={`${follower.login}'s github contribution chart`} />
         </div>
       ))};
     </div>
