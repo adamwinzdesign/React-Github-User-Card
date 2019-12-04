@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 
 import axios from 'axios';
-// import UserCard from './components/UserCard';
-// import FollowerCard from './components/FollowerCard';
+import UserCard from './components/UserCard';
+import FollowerCard from './components/FollowerCard';
 
 class App extends React.Component {
   constructor() {
@@ -40,8 +40,8 @@ class App extends React.Component {
   render() {
     return(
       <div>
-        {/* <UserCard user={this.state.user} />
-        <FollowerCard follower={this.state.follower} /> */}
+        <UserCard user={this.state.user} />
+        <FollowerCard follower={this.state.follower} />
       </div>
     )
   }
