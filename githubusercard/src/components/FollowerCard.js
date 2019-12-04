@@ -1,20 +1,22 @@
 import React from 'react';
 
-import { FollowerDiv, GraphContain, Graph } from './ComponentStyles';
+import { FollowerDiv, FollowerDetail, FollowerGraphContain, Graph, FollowerPicContain, ProfilePic } from './ComponentStyles';
 
 const FollowerCard = (props) => {
   console.log(props.follower)
   return(
     <FollowerDiv>
       {props.follower.map(follower => (
-        <div key={follower.id}>
-          <img src={follower.avatar_url} alt={follower.name} />
+        <FollowerDetail key={follower.id}>
+          <FollowerPicContain>
+            <ProfilePic src={follower.avatar_url} alt={follower.name} />
+          </FollowerPicContain>
           <h3>Login: {follower.login}</h3>
           <a href={follower.html_url} target='_blank' rel="noopener noreferrer">Github</a>
-          <GraphContain>
+          <FollowerGraphContain>
             <Graph src={`http://ghchart.rshah.org/${follower.login}`} alt={`${follower.login}'s github contribution chart`} />
-          </GraphContain>
-        </div>
+          </FollowerGraphContain>
+        </FollowerDetail>
       ))};
     </FollowerDiv>
   )

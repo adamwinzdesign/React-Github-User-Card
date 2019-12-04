@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { UserDiv, GraphContain, Graph } from './ComponentStyles';
+import { UserDiv, GraphContain, Graph, UserPicContain, ProfilePic } from './ComponentStyles';
 
 const UserCard = (props) => {
   console.log(props)
@@ -11,7 +11,9 @@ const UserCard = (props) => {
       <h2>Number of public repos: {props.user.public_repos}</h2>
       <p>Number of Followers: {props.user.followers}</p>
       <p>Number of users {props.user.name} is following: {props.user.following}</p>
-      <img src={props.user.avatar_url} alt='User'></img>
+      <UserPicContain>
+        <ProfilePic src={props.user.avatar_url} alt='User'></ProfilePic>
+      </UserPicContain>
       <GraphContain>
         <Graph src="http://ghchart.rshah.org/adamwinzdesign" alt="adamwinzdesign's Github chart" />
       </GraphContain>
